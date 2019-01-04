@@ -1,0 +1,58 @@
+server:
+  port: 8801
+
+spring:
+  profiles:
+    active: ${profile:dev}
+  application:
+    name: cc-login
+  datasource:
+    druid:
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      initial-size: 10
+      min-idle: 20
+      max-active: 100
+      max-wait: 3000
+      time-between-eviction-runs-millis: 6000
+      min-evictable-idle-time-millis: 30000
+      filters: stat
+      validation-query: SELECT 'x' from dual
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      max-open-prepared-statements: 3
+      remove-abandoned: true
+      remove-abandoned-timeout: 1800
+      log-abandoned: true
+  redis:
+    timeout: 1000
+    jedis:
+      pool:
+        max-wait: -1
+        max-active: 10
+    database: 1
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+mybatis:
+  mapper-locations: classpath*:/com/dgbiztech/dao/*/*.xml
+  type-aliases-package: com.dgbiztech.model.*
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+    call-setters-on-nulls: true
+    cache-enabled: true
+    lazy-loading-enabled: true
+    multiple-resultsets-enabled: true
+    use-column-label: true
+    use-generated-keys: false
+    auto-mapping-behavior: partial
+    safe-rowbounds-enabled: false
+    local-cache-scope: session
+    jdbc-type-for-null: other
+    lazy-load-trigger-methods: equals,clone,hashcode,tostring
+    aggressive-lazy-loading: false
