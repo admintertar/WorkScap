@@ -29,7 +29,7 @@ public class UserController {
 
     @GetMapping("/getString")
     public String getStr(){
-        return this.redisTemplate.opsForValue().get("keysssssss");
+        return this.redisTemplate.opsForValue().get("keysssssss").toString()+"8802";
     }
 
     @GetMapping("/setString/{str}")
