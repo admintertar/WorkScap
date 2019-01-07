@@ -1,11 +1,11 @@
 server:
-  port: 8802
+  port: 8801
 
 spring:
   profiles:
     active: ${profile:dev}
   application:
-    name: cc-login
+    name: cc-user
   datasource:
     druid:
       driver-class-name: oracle.jdbc.driver.OracleDriver

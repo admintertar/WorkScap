@@ -6,10 +6,10 @@ import org.springframework.cloud.client.SpringCloudApplication;
 
 @SpringCloudApplication
 @MapperScan("com.dgbiztech.dao")
-public class LoginApplication {
+public class UserApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LoginApplication.class,args);
+        SpringApplication.run(UserApplication.class,args);
     }
 
 }
