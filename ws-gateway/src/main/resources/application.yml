@@ -11,9 +11,13 @@ spring:
           enabled: true
           lowerCaseServiceId: true
 
+      default-filters:  # 全局断路器
+        - name: Hystrix
+          args:
+            name: fallbackcmd
+            fallbackUri: forward:/fallbackcontroller
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-
-

@@ -1,4 +1,4 @@
-package com.dgbiztech.configuration.RedisConfig;
+package com.dgbiztech.configuration.redisconfig;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
@@ -9,7 +9,7 @@ import java.nio.charset.Charset;
 
 /*
  * @ClassName FastJsonRedisSerializer
- * @Description (这里用一句话描述这个类的作用)
+ * @Description Redis序列化
  * @author Hongping.Zhong
  * @Date 2019-01-04 16:55
  * @version 1.0.0

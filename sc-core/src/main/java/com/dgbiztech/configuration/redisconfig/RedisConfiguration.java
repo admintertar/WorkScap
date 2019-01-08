@@ -1,4 +1,4 @@
-package com.dgbiztech.configuration.RedisConfig;
+package com.dgbiztech.configuration.redisconfig;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
